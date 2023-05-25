@@ -4,10 +4,10 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class ProductSeeder extends Seede
-`
+class ProductSeeder extends Seeder
+{
     public function run()
-    
+    {
         $data = [
             'name' => 'skincare',
             'category'    => 'utlities',
@@ -18,12 +18,13 @@ class ProductSeeder extends Seede
         // Simple Queries
         $this->db->table('products')->insert($data);
         
-        $data = 
-            'name' => 'Bodylation',
+        $data = [
+            'name' => 'bodylation',
             'category'    => 'utlities',
             'price'    => 30000,
             'stock'    => 500,
-        ;
+    ];
         // Using Query Builder
         $this->db->table('products')->insert($data);
-    
+}
+}
